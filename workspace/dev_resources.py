@@ -63,6 +63,7 @@ dev_fastapi = FastApi(
     use_cache=ws_settings.use_cache,
     # Read secrets from secrets/dev_api_secrets.yml
     secrets_file=ws_settings.ws_root.joinpath("workspace/secrets/dev_api_secrets.yml"),
+    depends_on=[dev_db],
 )
 
 # -*- Dev DockerResources
