@@ -17,10 +17,10 @@ if [[ "$#" -eq 1 ]] && [[ "$1" = "upgrade" ]];
 then
   print_heading "Generating requirements.txt with upgrade"
   UV_CUSTOM_COMPILE_COMMAND="./scripts/generate_requirements.sh upgrade" \
-    uv pip compile ${REPO_ROOT}/pyproject.toml --no-cache-dir --upgrade -o ${REPO_ROOT}/requirements.txt
+    uv pip compile ${REPO_ROOT}/pyproject.toml --no-cache --upgrade -o ${REPO_ROOT}/requirements.txt
 else
   print_heading "Generating requirements.txt"
   uv pip compile pyproject.toml -o requirements.txt
   UV_CUSTOM_COMPILE_COMMAND="./scripts/generate_requirements.sh" \
-    uv pip compile ${REPO_ROOT}/pyproject.toml --no-cache-dir -o ${REPO_ROOT}/requirements.txt
+    uv pip compile ${REPO_ROOT}/pyproject.toml --no-cache -o ${REPO_ROOT}/requirements.txt
 fi
