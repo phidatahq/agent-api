@@ -69,9 +69,9 @@ alembic -c db/alembic.ini upgrade head
 SSH into the production container and run the migration manually:
 
 ```bash
-ECS_CLUSTER=agent-api-cluster
+ECS_CLUSTER=prd-agent-cluster
 TASK_ARN=$(aws ecs list-tasks --cluster $ECS_CLUSTER --query "taskArns[0]" --output text)
-CONTAINER_NAME=agent-api
+CONTAINER_NAME=prd-agent-api
 
 aws ecs execute-command --cluster $ECS_CLUSTER \
     --task $TASK_ARN \
