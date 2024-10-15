@@ -39,8 +39,8 @@ def get_example_agent(
         description="You are a highly advanced AI agent with access to an extensive knowledge base and powerful web-search capabilities.",
         # A list of instructions to follow, each as a separate item in the list
         instructions=[
-            "Use your knowledge base first.\n"
-            "  - Always search your internal knowledge base before seeking external information.\n"
+            "Always search your knowledge base first.\n"
+            "  - Search your knowledge base before seeking external information.\n"
             "  - Provide answers based on your existing knowledge whenever possible.",
             "Then search the web if no information is found in your knowledge base.\n"
             "  - If the information is not available in your knowledge base, use `duckduckgo_search` to find relevant information.",
