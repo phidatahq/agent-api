@@ -13,7 +13,7 @@ dependencies = [
   "nest_asyncio",
   "openai",
   "pgvector",
-  "phidata[aws]==2.5.0",
+  "phidata[aws]==2.5.1",
   "psycopg[binary]",
   "pypdf",
   "pytest",
